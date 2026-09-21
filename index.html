@@ -11,9 +11,17 @@
   <!-- Top Navigation Bar -->
   <header class="navbar">
     <div class="nav-container">
-      <span class="nav-logo">Ryan Gould</span>
+      <div class="nav-brand">
+        <svg class="rpi-nav-seal" viewBox="0 0 100 100" aria-label="Rensselaer Polytechnic Institute Emblem">
+          <circle cx="50" cy="50" r="48" fill="#e11d48" stroke="#ffffff" stroke-width="3"/>
+          <circle cx="50" cy="50" r="38" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3,3"/>
+          <text x="50" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">RPI</text>
+        </svg>
+        <span class="nav-logo">Ryan Gould</span>
+      </div>
       <nav>
         <a href="#about">About</a>
+        <a href="#projects" class="nav-btn-highlight">Projects</a>
         <a href="#education">Education</a>
         <a href="#athletics">Athletics</a>
         <a href="#involvement">Involvement & Music</a>
@@ -35,14 +43,20 @@
       </div>
       <div class="hero-content">
         <div class="badge-row">
-          <span class="badge">RPI Class of 2030</span>
+          <span class="badge badge-rpi">
+            <svg class="badge-icon" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="48" fill="#e11d48"/>
+              <text x="50" y="62" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="36" font-weight="900" fill="#ffffff" text-anchor="middle">R</text>
+            </svg>
+            RPI Class of 2030
+          </span>
           <span class="badge">Industrial & Management Engineering</span>
           <span class="badge">NCAA DIII Varsity Pitcher</span>
-          <span class="badge">BHS Class of 2026 Salutatorian</span>
+          <span class="badge">BHS Salutatorian</span>
         </div>
         <h1>Ryan Gould</h1>
-        <p class="tagline">Industrial & Management Engineering Student · NCAA DIII Collegiate Pitcher · Process Optimization & Operations</p>
-        <p class="hero-subtext">Rensselaer Leadership Award Recipient. Actively seeking a Summer 2027 Engineering, Manufacturing & Operations Internship.</p>
+        <p class="tagline">Engineering Student & Collegiate Athlete focused on Siemens NX CAD, Lean Operations, and High-Performance Team Leadership.</p>
+        <p class="hero-subtext">Recipient of the Rensselaer Leadership Award. Actively seeking a Summer 2027 Engineering, Manufacturing & Operations Internship.</p>
         
         <!-- Contact & Profile Links -->
         <div class="contact-links-row">
@@ -65,14 +79,87 @@
 
   <main class="content-container">
 
+    <!-- Primary Engineering Projects Section -->
+    <section id="projects" class="page-section featured-section">
+      <div class="section-header-tag">
+        <span class="tag-label">Portfolio Focus</span>
+        <h2 class="section-title">Engineering & CAD Projects</h2>
+      </div>
+      <p class="intro-paragraph">
+        Applied 3D solid modeling, parametric feature design, and Design for Manufacturability (DFM) principles constructed in Siemens NX. Click on any model preview to inspect full-screen high-resolution views.
+      </p>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Track Plate -->
+        <div class="project-card">
+          <div class="project-media-frame" onclick="openLightbox('track_plate.png', 'Track Plate Solid Model — Siemens NX CAD')">
+            <img src="track_plate.png" alt="Track Plate Solid Model in Siemens NX">
+            <div class="project-media-overlay">
+              <span>View Full Screen ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-meta">
+              <span class="pill-tag">Siemens NX CAD</span>
+              <span class="pill-tag">Mechanical DFM</span>
+              <span class="pill-date">Fall 2026</span>
+            </div>
+            <h3>Heavy Equipment Track Plate</h3>
+            <p class="project-lead">Parametric solid modeling of an asymmetric structural drive component designed for heavy cyclic loading, track link interconnection, and ground engagement.</p>
+            <details open>
+              <summary>View Engineering & CAD Highlights</summary>
+              <div class="details-body">
+                <ul>
+                  <li>Constructed multi-plane datum references, asymmetric profile extrusions, and draft angles suitable for forging and casting constraints.</li>
+                  <li>Engineered structural stiffening ribs, wear surface recesses, and high-tolerance pin-mounting bosses configured for heavy shear load distribution.</li>
+                  <li>Applied ASME Y14.5 engineering standards, feature tree organization, and parametric expressions for rapid dimensional adjustments.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Project 2: Carved Blade -->
+        <div class="project-card">
+          <div class="project-media-frame" onclick="openLightbox('carved_blade.png', 'Carved Blade Aerodynamic / Turbomachinery Profile — Siemens NX CAD')">
+            <img src="carved_blade.png" alt="Carved Blade Model in Siemens NX">
+            <div class="project-media-overlay">
+              <span>View Full Screen ↗</span>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-meta">
+              <span class="pill-tag">Siemens NX CAD</span>
+              <span class="pill-tag">Surface & Loft Modeling</span>
+              <span class="pill-date">Fall 2026</span>
+            </div>
+            <h3>Complex Carved Blade Profile</h3>
+            <p class="project-lead">Aerodynamic and fluid flow surface geometry modeled with compound curvature, variable cross-section sweeps, and root mounting retention.</p>
+            <details open>
+              <summary>View Engineering & CAD Highlights</summary>
+              <div class="details-body">
+                <ul>
+                  <li>Executed continuous guide-curve lofts, complex sweeps, and sculptured parametric surfaces across variable chord angles.</li>
+                  <li>Modeled integrated root shank transitions and fillet blending to eliminate sharp internal stress concentrations.</li>
+                  <li>Maintained tangent and curvature continuity (G1/G2) across all sculpted face transitions to optimize fluid dynamic flow.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="page-section">
       <h2 class="section-title">About Me</h2>
       <p class="intro-paragraph">
-        I am an undergraduate student pursuing a B.S. in <strong>Industrial and Management Engineering</strong> at Rensselaer Polytechnic Institute (RPI)[cite: 10]. My technical foundation spans engineering drawing standards, Siemens NX CAD, lean manufacturing principles, and process workflow optimization[cite: 10].
+        I am an undergraduate student studying <strong>Industrial and Management Engineering</strong> at Rensselaer Polytechnic Institute (RPI). My coursework and project work center on computer-aided design, lean manufacturing principles, ergonomics, and process workflow optimization.
       </p>
       <p class="intro-paragraph">
-        Throughout high school and college, I have combined academic rigor with extensive competitive discipline and leadership: pitching at the NCAA Division III level[cite: 10], competing across 4 consecutive MIAA State Swimming Championships[cite: 9], leading as high school Student Council President and Drum Captain[cite: 9, 10], and summiting Mount Kilimanjaro (19,341 ft) at age 17[cite: 9, 10].
+        I combine academic discipline with high-level athletic and personal endurance: competing as an NCAA Division III pitcher at RPI, training as a 4-year state championship swimmer, serving four years as student council president and class salutatorian, and successfully summiting Mount Kilimanjaro (19,341 ft) in July 2025.
       </p>
     </section>
 
@@ -82,19 +169,26 @@
       
       <div class="expandable-card">
         <div class="card-head">
-          <div>
-            <h3>Rensselaer Polytechnic Institute (RPI)</h3>
-            <p class="sub-location">Troy, NY</p>
+          <div class="card-title-group">
+            <svg class="rpi-card-seal" viewBox="0 0 100 100" aria-label="Rensselaer Polytechnic Institute Emblem">
+              <circle cx="50" cy="50" r="48" fill="#e11d48" stroke="#ffffff" stroke-width="3"/>
+              <circle cx="50" cy="50" r="38" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3,3"/>
+              <text x="50" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">RPI</text>
+            </svg>
+            <div>
+              <h3>Rensselaer Polytechnic Institute (RPI)</h3>
+              <p class="sub-location">Troy, NY</p>
+            </div>
           </div>
           <span class="date-badge">Expected: May 2030</span>
         </div>
-        <p class="degree-highlight">B.S. in Industrial and Management Engineering — Rensselaer Leadership Award[cite: 10]</p>
+        <p class="degree-highlight">B.S. in Industrial and Management Engineering — Rensselaer Leadership Award</p>
         <details>
           <summary>View Coursework & Technical Areas</summary>
           <div class="details-body">
             <ul>
-              <li><strong>Current Coursework:</strong> Engineering Graphics and CAD (Siemens NX), Essence of Engineering Mechanics, Physics II, Calculus II, Principles of Economics[cite: 10].</li>
-              <li><strong>Core Concentrations:</strong> Process Optimization, Design for Manufacturability (DFM), Work Methods Design, Operations Modeling[cite: 10].</li>
+              <li><strong>Current Coursework:</strong> Engineering Graphics and CAD (Siemens NX), Essence of Engineering Mechanics, Physics II, Calculus II, Principles of Economics.</li>
+              <li><strong>Core Concentrations:</strong> Process Optimization, Design for Manufacturability (DFM), Work Methods Design, Operations Modeling.</li>
             </ul>
           </div>
         </details>
@@ -108,15 +202,15 @@
           </div>
           <span class="date-badge">Graduated June 2026</span>
         </div>
-        <p class="degree-highlight">Salutatorian (Rank 2 of Graduating Class) · High Honors (Grades 9–11) · Pro Merito (Grade 12)[cite: 9, 10]</p>
+        <p class="degree-highlight">Salutatorian (Rank 2 of Graduating Class) · High Honors (Grades 9–11) · Pro Merito (Grade 12)</p>
         <details>
           <summary>View Complete Academic Honors & Departmental Awards</summary>
           <div class="details-body">
             <ul>
-              <li><strong>Major Recognitions:</strong> College Board AP Scholar with Honor (July 2026)[cite: 9], Dartmouth Club of Pioneer Valley Book Award (Grade 11)[cite: 9], Rochester Institute of Technology Award (Grade 11)[cite: 9].</li>
-              <li><strong>Scholastic Excellence:</strong> U.S. Marine Corps Scholastic Excellence Award (Grade 12)[cite: 9], National Society of High School Scholars (Grade 12)[cite: 9].</li>
-              <li><strong>Department Awards:</strong> Math Department Award for Excellence in Statistics (Grade 12)[cite: 9], Educators Award in AP English Literature and Composition (Grade 12)[cite: 9], Excellence in Honors Chemistry (Grade 11)[cite: 9], Honors French 4 & 3 Awards (Grades 10 & 11)[cite: 9], Honors Algebra 2 Award (Grade 10)[cite: 9].</li>
-              <li><strong>Student Leadership:</strong> John R. Hagberg Student Council Service Award (Grade 12)[cite: 9], Student Council Recognition Award (Grade 12)[cite: 9].</li>
+              <li><strong>Major Recognitions:</strong> College Board AP Scholar with Honor (July 2026), Dartmouth Club of Pioneer Valley Book Award (Grade 11), Rochester Institute of Technology Award (Grade 11).</li>
+              <li><strong>Scholastic Excellence:</strong> U.S. Marine Corps Scholastic Excellence Award (Grade 12), National Society of High School Scholars (Grade 12).</li>
+              <li><strong>Department Awards:</strong> Math Department Award for Excellence in Statistics (Grade 12), Educators Award in AP English Literature and Composition (Grade 12), Excellence in Honors Chemistry (Grade 11), Honors French 4 & 3 Awards (Grades 10 & 11), Honors Algebra 2 Award (Grade 10).</li>
+              <li><strong>Student Leadership:</strong> John R. Hagberg Student Council Service Award (Grade 12), Student Council Recognition Award (Grade 12).</li>
             </ul>
           </div>
         </details>
@@ -131,16 +225,16 @@
         <div class="expandable-card">
           <div class="card-head">
             <h3>Varsity Swimming</h3>
-            <span class="date-badge">4-Year Varsity · 2-Year Captain[cite: 9]</span>
+            <span class="date-badge">4-Year Varsity · 2-Year Captain</span>
           </div>
-          <p class="role-highlight">Western Mass Champion & All-Star Selection[cite: 9]</p>
+          <p class="role-highlight">Western Mass Champion & All-Star Selection</p>
           <details>
             <summary>View Swim Championship Distinctions</summary>
             <div class="details-body">
               <ul>
-                <li><strong>State Championships:</strong> Qualified and competed at the MIAA State Championships across 4 consecutive seasons (2023, 2024, 2025, 2026)[cite: 9].</li>
-                <li><strong>Western Massachusetts Champions:</strong> Western Mass Team Championship Winner (Grade 10)[cite: 9].</li>
-                <li><strong>All-Star Honors:</strong> Pioneer Valley All-Star[cite: 9], All Western Mass First Team (Grades 11, 12)[cite: 9], All Western Mass Second Team (Grade 10)[cite: 9].</li>
+                <li><strong>State Championships:</strong> Qualified and competed at the MIAA State Championships across 4 consecutive seasons (2023, 2024, 2025, 2026).</li>
+                <li><strong>Western Massachusetts Champions:</strong> Western Mass Team Championship Winner (Grade 10).</li>
+                <li><strong>All-Star Honors:</strong> Pioneer Valley All-Star, All Western Mass First Team (Grades 11, 12), All Western Mass Second Team (Grade 10).</li>
               </ul>
             </div>
           </details>
@@ -149,15 +243,15 @@
         <div class="expandable-card">
           <div class="card-head">
             <h3>Collegiate & Varsity Baseball</h3>
-            <span class="date-badge">NCAA DIII Pitcher · Varsity Starter[cite: 9, 10]</span>
+            <span class="date-badge">NCAA DIII Pitcher · Varsity Starter</span>
           </div>
-          <p class="role-highlight">RPI Baseball (Pitcher) & MBCA All-Star[cite: 9, 10]</p>
+          <p class="role-highlight">RPI Baseball (Pitcher) & MBCA All-Star</p>
           <details>
             <summary>View Baseball Records & Honors</summary>
             <div class="details-body">
               <ul>
-                <li><strong>RPI Varsity Baseball:</strong> NCAA Division III pitcher dedicating 20+ hours weekly to bullpen routines, weight room training, and game preparation[cite: 10].</li>
-                <li><strong>High School & Legion:</strong> MIAA State Championships (2024, 2025)[cite: 9]; Massachusetts Baseball Coaches Association Sophomore Select All-Star (2024)[cite: 9]; All Western Mass First Team (Grade 12)[cite: 9]; Senior Legion Baseball (Grades 10–12)[cite: 9]; Valley Heat Club (Grades 9, 10)[cite: 9].</li>
+                <li><strong>RPI Varsity Baseball:</strong> NCAA Division III pitcher dedicating 20+ hours weekly to bullpen routines, weight room training, and game preparation.</li>
+                <li><strong>High School & Legion:</strong> MIAA State Championships (2024, 2025); Massachusetts Baseball Coaches Association Sophomore Select All-Star (2024); All Western Mass First Team (Grade 12); Senior Legion Baseball (Grades 10–12); Valley Heat Club (Grades 9, 10).</li>
               </ul>
             </div>
           </details>
@@ -168,16 +262,16 @@
         <div class="expandable-card">
           <div class="card-head">
             <h3>Varsity Cross Country</h3>
-            <span class="date-badge">2-Year Captain · MIAA State Qualifier[cite: 9]</span>
+            <span class="date-badge">2-Year Captain · MIAA State Qualifier</span>
           </div>
-          <p class="role-highlight">Distance & Endurance Team Captain[cite: 9]</p>
+          <p class="role-highlight">Distance & Endurance Team Captain</p>
           <details>
             <summary>View Cross Country Highlights</summary>
             <div class="details-body">
               <ul>
-                <li><strong>Leadership:</strong> Team Captain for Cross Country across Grades 11 and 12[cite: 9].</li>
-                <li><strong>Competitions:</strong> Competed at MIAA State Championship (2025)[cite: 9]; 3-year Varsity runner (Grades 10–12)[cite: 9].</li>
-                <li><strong>12 Season Athlete:</strong> Awarded Belchertown High School's 12-Season Athlete Award and Male Athlete of the Year Award[cite: 9].</li>
+                <li><strong>Leadership:</strong> Team Captain for Cross Country across Grades 11 and 12.</li>
+                <li><strong>Competitions:</strong> Competed at MIAA State Championship (2025); 3-year Varsity runner (Grades 10–12).</li>
+                <li><strong>12 Season Athlete:</strong> Awarded Belchertown High School's 12-Season Athlete Award and Male Athlete of the Year Award.</li>
               </ul>
             </div>
           </details>
@@ -186,15 +280,15 @@
         <div class="expandable-card">
           <div class="card-head">
             <h3>High-Altitude Mountaineering</h3>
-            <span class="date-badge">Uhuru Peak Summit (19,341 ft)[cite: 9, 10]</span>
+            <span class="date-badge">Uhuru Peak Summit (19,341 ft)</span>
           </div>
-          <p class="role-highlight">Mount Kilimanjaro, Tanzania — July 2025[cite: 9, 10]</p>
+          <p class="role-highlight">Mount Kilimanjaro, Tanzania — July 2025</p>
           <details>
             <summary>View Trekking & Expedition History</summary>
             <div class="details-body">
               <ul>
-                <li><strong>Mount Kilimanjaro:</strong> Successfully summited the world’s tallest free-standing mountain at age 17 via the Machame Route, navigating severe elevation gain and rapid climate shifts[cite: 9, 10].</li>
-                <li><strong>Additional Expeditions:</strong> Wilderness and technical hiking in Yosemite National Park (October 2024)[cite: 9].</li>
+                <li><strong>Mount Kilimanjaro:</strong> Successfully summited the world’s tallest free-standing mountain at age 17 via the Machame Route, navigating severe elevation gain and rapid climate shifts.</li>
+                <li><strong>Additional Expeditions:</strong> Wilderness and technical hiking in Yosemite National Park (October 2024).</li>
               </ul>
             </div>
           </details>
@@ -211,13 +305,13 @@
           <h3>Rensselaer Motorsport (Formula SAE)</h3>
           <span class="date-badge">Fall 2026 – Present</span>
         </div>
-        <p class="role-highlight">Active Member — CAD Modeling & Fabrication[cite: 10]</p>
+        <p class="role-highlight">Active Member — CAD Modeling & Fabrication</p>
         <details>
           <summary>View Engineering Project Details</summary>
           <div class="details-body">
             <ul>
-              <li>Participate in CAD component design and manufacturing using Siemens NX[cite: 10].</li>
-              <li>Apply Lean Manufacturing and Design for Manufacturability (DFM) principles during shop machining and component fabrication[cite: 10].</li>
+              <li>Participate in CAD component design and manufacturing using Siemens NX.</li>
+              <li>Apply Lean Manufacturing and Design for Manufacturability (DFM) principles during shop machining and component fabrication.</li>
             </ul>
           </div>
         </details>
@@ -228,12 +322,12 @@
           <h3>Institute of Industrial and Systems Engineers (IISE)</h3>
           <span class="date-badge">Fall 2026 – Present</span>
         </div>
-        <p class="role-highlight">RPI Chapter Member[cite: 10]</p>
+        <p class="role-highlight">RPI Chapter Member</p>
         <details>
           <summary>View Professional Development</summary>
           <div class="details-body">
             <ul>
-              <li>Engage in workshops focused on workflow scheduling, operations research, and lean process continuous improvement[cite: 10].</li>
+              <li>Engage in workshops focused on workflow scheduling, operations research, and lean process continuous improvement.</li>
             </ul>
           </div>
         </details>
@@ -242,15 +336,15 @@
       <div class="expandable-card">
         <div class="card-head">
           <h3>Student Council Leadership</h3>
-          <span class="date-badge">Elected Grades 9–12 · President Grade 12[cite: 9]</span>
+          <span class="date-badge">Elected Grades 9–12 · President Grade 12</span>
         </div>
-        <p class="role-highlight">President (Grade 12) & Vice President (Grade 11)[cite: 9]</p>
+        <p class="role-highlight">President (Grade 12) & Vice President (Grade 11)</p>
         <details>
           <summary>View Governance Responsibilities</summary>
           <div class="details-body">
             <ul>
-              <li>Led council meetings, handled budgeting and event logistics, and coordinated school initiatives for over 600 students[cite: 9, 10].</li>
-              <li>Selected American Legion Boys State Representative (Grade 11)[cite: 9].</li>
+              <li>Led council meetings, handled budgeting and event logistics, and coordinated school initiatives for over 600 students.</li>
+              <li>Selected American Legion Boys State Representative (Grade 11).</li>
             </ul>
           </div>
         </details>
@@ -259,16 +353,16 @@
       <div class="expandable-card">
         <div class="card-head">
           <h3>Percussion Leadership & Fine Arts</h3>
-          <span class="date-badge">Drum Captain (Grades 11, 12) · All-State Recommendation[cite: 9]</span>
+          <span class="date-badge">Drum Captain (Grades 11, 12) · All-State Recommendation</span>
         </div>
-        <p class="role-highlight">U.S. Marine Corps “Semper Fidelis” Award for Musical Excellence[cite: 9]</p>
+        <p class="role-highlight">U.S. Marine Corps “Semper Fidelis” Award for Musical Excellence</p>
         <details>
           <summary>View Musical Distinctions & Awards</summary>
           <div class="details-body">
             <ul>
-              <li><strong>Marching & Concert Band:</strong> Tenor Percussion lead in Marching Band (Grades 9–12); Symphony Band (Grades 10–12); Honors Wind Ensemble (Grades 9–12); Jazz Band (Grades 9–12)[cite: 9].</li>
-              <li><strong>State Recognitions:</strong> MICCA Showcase Gold Medalist (Symphony Band & Percussion Ensemble)[cite: 9]; Pioneer Valley Senior Districts Audition Winner (Grades 9–11)[cite: 9]; Massachusetts All-State Recommendation in Percussion (Grade 11)[cite: 9].</li>
-              <li><strong>Honors Society:</strong> Inducted into Tri-M National Music Honor Society (February 2023); Patrick S. Gilmore Band Award recipient[cite: 9].</li>
+              <li><strong>Marching & Concert Band:</strong> Tenor Percussion lead in Marching Band (Grades 9–12); Symphony Band (Grades 10–12); Honors Wind Ensemble (Grades 9–12); Jazz Band (Grades 9–12).</li>
+              <li><strong>State Recognitions:</strong> MICCA Showcase Gold Medalist (Symphony Band & Percussion Ensemble); Pioneer Valley Senior Districts Audition Winner (Grades 9–11); Massachusetts All-State Recommendation in Percussion (Grade 11).</li>
+              <li><strong>Honors Society:</strong> Inducted into Tri-M National Music Honor Society (February 2023); Patrick S. Gilmore Band Award recipient.</li>
             </ul>
           </div>
         </details>
@@ -285,15 +379,15 @@
             <h3>Community Service & Volunteerism</h3>
             <span class="date-badge">2022 – Present</span>
           </div>
-          <p class="role-highlight">Tri-M Society, Youth Athletics & Saint Francis Church[cite: 9]</p>
+          <p class="role-highlight">Tri-M Society, Youth Athletics & Saint Francis Church</p>
           <details>
             <summary>View Community Contributions</summary>
             <div class="details-body">
               <ul>
-                <li><strong>Tri-M Honors Society:</strong> Volunteer percussion technician at youth music festivals[cite: 9].</li>
-                <li><strong>Athletics Volunteering:</strong> Belchertown Little League clinic assistant and Home Run Derby staff; Belchertown Recreation Stingrays swim meet timer[cite: 9].</li>
-                <li><strong>Civic & Church:</strong> Saint Francis Church community event volunteer; Belchertown Music Boosters fundraising performer; Salvation Army bell-ringer[cite: 9].</li>
-                <li><strong>Youth Leadership:</strong> Young Life youth ministry participant[cite: 9].</li>
+                <li><strong>Tri-M Honors Society:</strong> Volunteer percussion technician at youth music festivals.</li>
+                <li><strong>Athletics Volunteering:</strong> Belchertown Little League clinic assistant and Home Run Derby staff; Belchertown Recreation Stingrays swim meet timer.</li>
+                <li><strong>Civic & Church:</strong> Saint Francis Church community event volunteer; Belchertown Music Boosters fundraising performer; Salvation Army bell-ringer.</li>
+                <li><strong>Youth Leadership:</strong> Young Life youth ministry participant.</li>
               </ul>
             </div>
           </details>
@@ -304,15 +398,15 @@
             <h3>Employment History</h3>
             <span class="date-badge">Customer Service, Instruction & Logistics</span>
           </div>
-          <p class="role-highlight">Restaurant Operations, Umpiring & Instruction[cite: 9]</p>
+          <p class="role-highlight">Restaurant Operations, Umpiring & Instruction</p>
           <details>
             <summary>View Employment Roles</summary>
             <div class="details-body">
               <ul>
-                <li><strong>Antonio's Restaurant:</strong> Host and Delivery Driver (Nov 2024 – Present) managing high-volume order dispatching and guest logistics[cite: 9].</li>
-                <li><strong>Belchertown Little League:</strong> Certified Game Umpire (May 2022 – Present) enforcing regulation play and field safety[cite: 9].</li>
-                <li><strong>Private Music Instruction:</strong> Independent percussion instructor providing technique and timing lessons (2023 – Present)[cite: 9].</li>
-                <li><strong>Agricultural & Childcare:</strong> Farm laborer at Sapowski’s Farm (Summer 2023); private childcare coordinator (Summer 2022)[cite: 9].</li>
+                <li><strong>Antonio's Restaurant:</strong> Host and Delivery Driver (Nov 2024 – Present) managing high-volume order dispatching and guest logistics.</li>
+                <li><strong>Belchertown Little League:</strong> Certified Game Umpire (May 2022 – Present) enforcing regulation play and field safety.</li>
+                <li><strong>Private Music Instruction:</strong> Independent percussion instructor providing technique and timing lessons (2023 – Present).</li>
+                <li><strong>Agricultural & Childcare:</strong> Farm laborer at Sapowski’s Farm (Summer 2023); private childcare coordinator (Summer 2022).</li>
               </ul>
             </div>
           </details>
@@ -326,15 +420,15 @@
       <div class="skills-grid">
         <div class="skill-card">
           <h4>Engineering & CAD</h4>
-          <p>Siemens NX, 3D Solid Modeling, Engineering Drawing Standards, DFM (Design for Manufacturability)[cite: 10]</p>
+          <p>Siemens NX, 3D Solid Modeling, Parametric Surface Sweeps, Engineering Drawing Standards, DFM</p>
         </div>
         <div class="skill-card">
           <h4>Data & Computing</h4>
-          <p>Microsoft Excel (Data Modeling, Advanced Nested Formulas), Google Sheets, Python, Git/GitHub, VS Code, HTML5/CSS3[cite: 10]</p>
+          <p>Microsoft Excel (Data Modeling, Advanced Nested Formulas), Google Sheets, Python, Git/GitHub, VS Code, HTML5/CSS3</p>
         </div>
         <div class="skill-card">
           <h4>Operations & Leadership</h4>
-          <p>Lean Methodologies, Workflow Analysis, Public Speaking, Cross-Functional Team Coordination, Event Budgeting[cite: 10]</p>
+          <p>Lean Methodologies, Workflow Analysis, Public Speaking, Cross-Functional Team Coordination, Event Budgeting</p>
         </div>
       </div>
     </section>
@@ -346,14 +440,13 @@
       
       <div class="gallery-grid">
         
-        <!-- Corrected Kilimanjaro image file name: kiliminjaro.jpg -->
         <div class="gallery-card" onclick="openLightbox('kiliminjaro.jpg', 'Mount Kilimanjaro Summit (19,341 ft) — Machame Route, Tanzania (July 2025)')">
           <div class="img-frame">
             <img src="kiliminjaro.jpg" alt="Ryan Gould at Mount Kilimanjaro">
           </div>
           <div class="gallery-info">
             <h4>Mount Kilimanjaro Summit</h4>
-            <p>19,341 ft · Machame Route · Tanzania ↗[cite: 9, 10]</p>
+            <p>19,341 ft · Machame Route · Tanzania ↗</p>
           </div>
         </div>
 
@@ -363,7 +456,7 @@
           </div>
           <div class="gallery-info">
             <h4>NCAA DIII Varsity Pitching</h4>
-            <p>RPI Varsity Baseball Pitcher ↗[cite: 10]</p>
+            <p>RPI Varsity Baseball Pitcher ↗</p>
           </div>
         </div>
 
@@ -373,7 +466,7 @@
           </div>
           <div class="gallery-info">
             <h4>Marching Band & Percussion</h4>
-            <p>Drum Captain · MICCA Gold Medalist ↗[cite: 9]</p>
+            <p>Drum Captain · MICCA Gold Medalist ↗</p>
           </div>
         </div>
 
@@ -412,7 +505,7 @@
         <input 
           type="text" 
           id="resumeInput" 
-          placeholder="Try: 'swimming', 'baseball', 'kilimanjaro', 'NX', 'music', 'work', 'salutatorian'..." 
+          placeholder="Try: 'cad', 'projects', 'swimming', 'baseball', 'kilimanjaro', 'music', 'work'..." 
           oninput="queryResume()"
         >
       </div>
@@ -425,7 +518,7 @@
     <!-- Contact Section -->
     <section id="contact" class="page-section contact-box">
       <h2>Get In Touch</h2>
-      <p>Currently seeking Summer 2027 internship opportunities in Industrial, Manufacturing, and Operations Engineering[cite: 10].</p>
+      <p>Currently seeking Summer 2027 internship opportunities in Industrial, Manufacturing, and Operations Engineering.</p>
       <div class="contact-action-buttons">
         <a href="mailto:ryangouldl8@gmail.com" class="btn btn-primary">Send Email</a>
         <a href="tel:4133356280" class="btn btn-outline">Call (413) 335-6280</a>
@@ -435,7 +528,14 @@
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Ryan Gould · B.S. Industrial & Management Engineering, RPI[cite: 10]</p>
+    <div class="footer-seal-wrap">
+      <svg class="rpi-footer-seal" viewBox="0 0 100 100" aria-label="Rensselaer Polytechnic Institute Emblem">
+        <circle cx="50" cy="50" r="48" fill="#e11d48" stroke="#ffffff" stroke-width="3"/>
+        <circle cx="50" cy="50" r="38" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="3,3"/>
+        <text x="50" y="58" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">RPI</text>
+      </svg>
+    </div>
+    <p>© 2026 Ryan Gould · B.S. Industrial & Management Engineering, RPI · <a href="mailto:ryangouldl8@gmail.com">ryangouldl8@gmail.com</a></p>
   </footer>
 
   <!-- Lightbox Modal -->
@@ -465,6 +565,10 @@
 
     const resumeEntries = [
       {
+        keys: ["cad", "project", "projects", "track plate", "blade", "nx", "siemens", "solid modeling"],
+        ans: "Ryan's engineering CAD projects include a Heavy Equipment Track Plate modeled with asymmetric draft angles, load-bearing stiffeners, and forged mounting pin-holes, as well as a Complex Carved Blade modeled using continuous guide-curve lofts and G1/G2 curvature continuity in Siemens NX."
+      },
+      {
         keys: ["swim", "swimming", "stroke", "all star", "western mass", "state championship"],
         ans: "Ryan is a 4-year MIAA Varsity swimmer and 2-year Team Captain. He competed at State Championships four years running (2023–2026), won a Western Mass team championship in Grade 10, and earned Pioneer Valley All-Star and All Western Mass First Team honors."
       },
@@ -475,10 +579,6 @@
       {
         keys: ["kili", "kilimanjaro", "mountain", "climb", "hiking", "tanzania", "summit"],
         ans: "In July 2025 at age 17, Ryan summited Mount Kilimanjaro (19,341 ft)—the world's highest free-standing mountain—via the Machame Route after traversing five distinct climate zones."
-      },
-      {
-        keys: ["cad", "nx", "siemens", "software", "excel", "python", "skills", "tech"],
-        ans: "Ryan's engineering skillset includes Siemens NX CAD (3D solid modeling, engineering drawings), advanced Microsoft Excel (nested formulas, modeling), Python, and Lean Manufacturing/DFM principles."
       },
       {
         keys: ["work", "job", "antonios", "umpire", "lessons", "employment"],
